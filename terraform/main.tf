@@ -36,7 +36,7 @@ resource "aws_security_group" "calculator_sg" {
 }
 
 resource "aws_instance" "calculatorAngular" {
-  ami           = "ami-0c55b159cbfafe1f0" # Ubuntu 22.04 (Change as needed)
+  ami           = "ami-04b4f1a9cf54c11d0" # Ubuntu 22.04 (Change as needed)
   instance_type = "t2.micro"
   key_name      = "your-key" # Change to your AWS key pair name
 
