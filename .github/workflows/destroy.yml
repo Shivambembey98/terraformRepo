@@ -26,6 +26,12 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
+        working-directory: ./terraform # Adjust this to your Terraform directory
+
+      - name: Show Terraform State (Debugging)
+        run: terraform state list
+        working-directory: ./terraform # Ensure Terraform sees the resources
 
       - name: Destroy Terraform Resources
         run: terraform destroy -auto-approve
+        working-directory: ./terraform # Set correct working directory
